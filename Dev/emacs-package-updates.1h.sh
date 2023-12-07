@@ -20,7 +20,7 @@ cat <<EOE > /tmp/emacs-package-updates.el
 (require 'package)
 
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
-(package-initialize)
+(package--archives-initialize)
 
 (defun melpa-archive-contents ()
   (let ((archive-contents (expand-file-name "elpa/archives/melpa/archive-contents"
